@@ -4505,6 +4505,11 @@ class TestStaticFileViews(OsfTestCase):
         assert_equal(res.status_code, 302)
         assert_equal(res.location, 'http://help.osf.io/')
 
+    def test_help_page(self):
+        res = self.app.get('/help/')
+        assert_equal(res.status_code,302)
+
+
 
 class TestUserConfirmSignal(OsfTestCase):
 
